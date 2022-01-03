@@ -1,11 +1,19 @@
-document.addEventListener('deviceready', onDeviceReady, false);
+App.controller('home', function (page) {
+    // put stuff here
+  });
 
-function onDeviceReady() {
-    // Cordova is now initialized. Have fun!
+  App.controller('contact', function (page) {
+    // put stuff here
+  });  
 
-    console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
-    document.getElementById('deviceready').classList.add('ready');
-    function checkConnection() {
-    }
 
-}
+  App.controller('about us', function (page) {
+    // put stuff here
+  }); 
+
+
+  try {
+    App.restore();
+  } catch (err) {
+    App.load('home');
+  }

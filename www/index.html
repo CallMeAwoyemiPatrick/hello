@@ -11,24 +11,61 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
         <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/app.min.css">
         <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
+        <title>My App</title>
     </head>
     <body>
-        <div class="app">
+           <!--Home Page-->
+        <div class="app-page" data-page="home">
+            <div class="app-topbar">
+              <div class="app-title">Home page</div>
+            </div>
+            <div class="app-content">
+              <div class="app-section">
+                <div class="app-button" data-target="contact">Contact Page</div>
+              </div>
+            </div>
+          </div>
+             <!--Contact Page-->
+          <div class="app-page" data-page="contact">
+            <div class="app-topbar">
+              <div class="app-button left" data-back data-autotitle></div>
+              <div class="app-title">Contact Us</div>
+            </div>
+            <div class="app-content">
+                <div class="app-button" data-target="about us">Contact Page</div>
+              <h1>Contact Us</h1>
+            </div>
+          </div>
+
+          <!--About Us-->
+          <div class="app-page" data-page="about us">
+            <div class="app-topbar">
+              <div class="app-button left" data-back data-autotitle></div>
+              <div class="app-title">About us</div>
+            </div>
+            <div class="app-content">
+              <h1>About us</h1>
+            </div>
+          </div>
+        <!--<div class="app">
             <h1>Apache Cordova</h1>
             <h2>Hello World</h2>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
-        </div>
+        </div>-->
         <script src="cordova.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/app.min.js"></script>
         <script src="js/index.js"></script>
     </body>
 </html>
